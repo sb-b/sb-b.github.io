@@ -11,6 +11,16 @@ To see my publication record please check out my [Google Scholar profile](https:
 #### BOUN Treebank: 
 Extracted from Turkish National Corpus (TNC), BOUN Treebank consists of 9,761 syntactically annotated sentences (121,214 tokens) from five different text types: Biographical texts, national newspapers, instructional texts, popular culture articles, and essays. [treebank](https://tulap.cmpe.boun.edu.tr/repository/xmlui/handle/20.500.12913/33), [paper](https://link.springer.com/article/10.1007/s10579-021-09558-0).
 
+#### OTA-BOUN Treebank:
+This is the first Ottoman Turkish dependency treebank in the Universal Dependencies (UD) annotation style. The OTA-BOUN Treebank currently includes 1,743 manually annotated sentences from twelve different texts by ten different writers. All of the texts are from literature published between 1880 and 1928. [treebank](https://github.com/UniversalDependencies/UD_Ottoman_Turkish-BOUN/tree/dev).
+
+#### OTC Corpus:
+Ottoman Text Corpus is a clean corpus of transliterated historical Turkish texts that spans a wide range of historical periods. Currently OTC encompasses a total of 11 million tokens. [corpus](https://huggingface.co/datasets/BUCOLIN/OTC-Corpus).
+
+#### HisTR NER Dataset:  
+HisTR is the first named entity recognition (NER) dataset for historical Turkish, comprising 812 sentences from the 17th to the 19th centuries. PERSON, LOCATION, and ORGANIZATION entities are manually labeled within the dataset. [dataset](https://huggingface.co/datasets/BUCOLIN/HisTR).
+
+
 #### IMST Treebank:  
 IMST Treebank consists of 5,635 syntactically annotated sentences collected from daily news reports and novels. [treebank](https://github.com/UniversalDependencies/UD_Turkish-IMST), [paper](https://aclanthology.org/W19-8013.pdf).
 
