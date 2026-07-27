@@ -22,7 +22,7 @@ This is the most updated version of the UD_Turkish-PUD treebank which was origin
 ### Historical Turkish NLP Resources:
 
 #### OTA-BOUN Treebank:
-This is the first Ottoman Turkish dependency treebank in the Universal Dependencies (UD) annotation style. The OTA-BOUN Treebank currently includes 1,742 manually annotated sentences from twelve different texts by ten different writers. All of the texts are from literature published between 1880 and 1928. [treebank](https://github.com/UniversalDependencies/UD_Ottoman_Turkish-BOUN/tree/dev), [paper-coming soon].
+This is the first Ottoman Turkish dependency treebank in the Universal Dependencies (UD) annotation style. The OTA-BOUN Treebank currently includes 1,742 manually annotated sentences from twelve different texts by ten different writers. All of the texts are from literature published between 1880 and 1928. [treebank](https://github.com/UniversalDependencies/UD_Ottoman_Turkish-BOUN/tree/dev), [paper](https://lrec.elra.info/lrec2026-main-551).
 
 #### OTC Corpus:
 Ottoman Text Corpus is a clean corpus of transliterated historical Turkish texts that spans a wide range of historical periods. Currently OTC encompasses a total of 11 million tokens. [corpus](https://huggingface.co/datasets/BUCOLIN/OTC-Corpus), [paper](https://arxiv.org/abs/2501.04828).
@@ -31,7 +31,7 @@ Ottoman Text Corpus is a clean corpus of transliterated historical Turkish texts
 HisTR is the first named entity recognition (NER) dataset for historical Turkish, comprising 812 sentences from the 17th to the 19th centuries. PERSON, LOCATION, and ORGANIZATION entities are manually labeled within the dataset. [dataset](https://huggingface.co/datasets/BUCOLIN/HisTR), [paper-coming soon].
 
 #### RuznamceNER Dataset:
-RuznamceNER is a manually annotated NER dataset derived from Kazasker Ruznamçe documents spanning two centuries. The sentences are extracted from transcripts of three ruznamçe volumes from the years 1603, 1720 and 1807. The dataset contains 2,138 sentences and a total of 8,730 annotated entities of types PERSON, LOCATION, and ORGANIZATION. [dataset](https://huggingface.co/datasets/BUCOLIN/RuznamceNER).
+RuznamceNER is a manually annotated NER dataset derived from Kazasker Ruznamçe documents spanning two centuries. The sentences are extracted from transcripts of three ruznamçe volumes from the years 1603, 1720 and 1807. The dataset contains 2,138 sentences and a total of 8,730 annotated entities of types PERSON, LOCATION, and ORGANIZATION. [dataset](https://huggingface.co/datasets/BUCOLIN/RuznamceNER), [paper](https://lrec.elra.info/lrec2026-main-126).
 
 ### Tools
 
