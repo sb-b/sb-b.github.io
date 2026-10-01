@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- the roof and circle from the lab logo -->
+  <defs>
+    <linearGradient id="blue" x1="0" x2="1">
+      <stop offset="0" stop-color="#5aa5f5"/>
+      <stop offset=".55" stop-color="#2f6fd8"/>
+      <stop offset="1" stop-color="#1b2a9b"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#blue)" d="M2 19 16 4l14 15h-7a7 7 0 0 0-14 0z"/>
+  <path fill="url(#blue)" d="M9 21.5a7 7 0 0 0 14 0z"/>
+</svg>
