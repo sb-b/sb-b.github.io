@@ -1,0 +1,292 @@
+/* BUCOLIN: a bolder layer on top of site.css.
+   Load it AFTER site.css:
+     <link rel="stylesheet" href="css/site.css">
+     <link rel="stylesheet" href="css/striking.css">
+
+   The idea: the page stays quiet and editorial, and the one loud thing is the
+   home hero, a deep-navy band with dependency arcs that draw in once. The
+   logo's three blues are used as a brand stripe, and type does the rest. */
+
+:root {
+  --ink: #0a1230;   /* the logo's navy, taken darker */
+  --ink-text: #eeeae0;
+  --ink-link: #9cc3fa;
+  --mark-gradient: linear-gradient(90deg, var(--mark-1), var(--mark-2) 55%, var(--mark-3));
+}
+
+/* the hero below extends sideways past the viewport; this stops a scrollbar */
+body { overflow-x: clip; }
+
+
+/* ---------- brand stripe on the header ---------- */
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: var(--mark-gradient);
+}
+
+
+/* ---------- type: bigger, tighter, more confident ---------- */
+
+.page-head h1 {
+  font-size: clamp(2.75rem, 1.8rem + 4vw, 4.75rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  font-optical-sizing: auto;
+}
+.page-head .lead { font-size: 1.375rem; }
+
+/* years are the content of the margin on the publications page, so let them be big */
+.label.year {
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--accent);
+  font-feature-settings: "onum" 1;
+}
+
+.entry h3 { font-size: 1.5rem; letter-spacing: -0.005em; }
+.reference .title { font-size: 1.125rem; }
+
+.section { border-top-color: var(--rule); }
+
+
+/* ---------- home hero: the one loud thing ---------- */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  padding-block: 4.5rem 5rem;
+  color: var(--ink-text);
+  /* the band runs edge to edge even though .hero sits inside .wrap */
+  clip-path: inset(0 -100vmax);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 -100vmax;
+  z-index: -1;
+  background:
+    radial-gradient(38rem 20rem at calc(50% + 22rem) 0, rgba(47, 111, 216, 0.45), transparent 70%),
+    var(--ink);
+}
+
+/* the original navy lettering is unreadable on the band, so always use the dark logo */
+.hero .logo { background-image: url(../img/logo-dark.png); }
+
+.hero .lead {
+  font-size: 1.5rem;
+  line-height: 1.45;
+  color: var(--ink-text);
+}
+
+.hero a { color: var(--ink-link); }
+.hero a:hover { color: #fff; }
+
+/* the home links become real buttons: first one filled, the rest outlined */
+.hero .links { gap: 0.75rem; }
+.hero .links a {
+  padding: 0.6rem 1rem;
+  border: 1px solid rgba(238, 234, 224, 0.35);
+  border-radius: 2px;
+  text-decoration: none;
+}
+.hero .links a:hover { border-color: #fff; }
+.hero .links a:first-child {
+  color: var(--ink);
+  background: var(--ink-text);
+  border-color: var(--ink-text);
+}
+.hero .links a:first-child:hover { background: #fff; }
+
+/* dependency arcs over five tokens, the picture of what the lab does.
+   Only where there is empty room to the right of the logo. */
+.hero::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 5.5rem;
+  right: 0;
+  width: 18rem;
+  aspect-ratio: 320 / 140;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 140' fill='none' stroke-linecap='round'%3E%3Cg stroke='%235aa5f5' stroke-width='1.5'%3E%3Cpath d='M35 116C35 90 95 90 95 116'/%3E%3Cpath d='M95 116C95 14 275 14 275 116' stroke='%238fc3ff'/%3E%3Cpath d='M155 116C155 90 215 90 215 116'/%3E%3C/g%3E%3Cg fill='%230a1230' stroke='%235aa5f5'%3E%3Crect x='10' y='116' width='50' height='16' rx='2'/%3E%3Crect x='70' y='116' width='50' height='16' rx='2'/%3E%3Crect x='130' y='116' width='50' height='16' rx='2'/%3E%3Crect x='190' y='116' width='50' height='16' rx='2'/%3E%3Crect x='250' y='116' width='50' height='16' rx='2'/%3E%3C/g%3E%3Cg fill='%238fc3ff'%3E%3Ccircle cx='95' cy='113' r='2.5'/%3E%3Ccircle cx='275' cy='113' r='2.5'/%3E%3Ccircle cx='215' cy='113' r='2.5'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+}
+@media (min-width: 75rem) {
+  .hero::after { display: block; }
+}
+
+/* the single orchestrated motion: the arcs are drawn in, left to right, once */
+@media (prefers-reduced-motion: no-preference) {
+  .hero::after { animation: arcs-in 1.4s 0.3s cubic-bezier(0.2, 0.7, 0.2, 1) backwards; }
+}
+@keyframes arcs-in {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+@media (max-width: 59.99rem) {
+  .hero { padding-block: 2.5rem 3rem; }
+  .hero .lead { font-size: 1.25rem; }
+}
+
+
+/* ---------- hero layout: logo on the left, lab description on the right ---------- */
+
+@media (min-width: 60rem) {
+  .hero {
+    display: grid;
+    grid-template-columns: 16rem minmax(0, 1fr);
+    column-gap: 3rem;
+    align-content: center;
+    align-items: center;
+  }
+  .hero .logo {
+    grid-column: 1;
+    grid-row: 1 / span 5;
+    width: 100%;
+  }
+  /* everything else (description, buttons) stacks in the right column */
+  .hero > :not(.logo) { grid-column: 2; }
+  .hero .lead { margin-top: 0; font-size: 1.375rem; }
+
+  /* the arcs had their room beside the logo; with the new layout they are hidden */
+  .hero::after { display: none; }
+}
+
+
+/* ====================================================================
+   NEWS PAGE (body[data-page="news"])
+   A navy title band like the home hero, then a timeline where the colour
+   of each item's left edge is its category (the same colours as the tags).
+   ==================================================================== */
+
+/* ---------- title band ---------- */
+
+body[data-page="news"] .page-head {
+  position: relative;
+  isolation: isolate;
+  padding-block: 4rem 3.5rem;
+  color: var(--ink-text);
+  clip-path: inset(0 -100vmax);
+}
+body[data-page="news"] .page-head::before {
+  content: "";
+  position: absolute;
+  inset: 0 -100vmax;
+  z-index: -1;
+  background:
+    radial-gradient(34rem 18rem at calc(50% + 20rem) 100%, rgba(47, 111, 216, 0.4), transparent 70%),
+    var(--ink);
+}
+body[data-page="news"] .page-head h1 {
+  font-size: clamp(2.75rem, 1.8rem + 3.2vw, 4.5rem);
+  letter-spacing: -0.025em;
+}
+body[data-page="news"] .page-head .gloss { color: rgba(238, 234, 224, 0.65); }
+body[data-page="news"] .page-head .lead { color: var(--ink-text); }
+
+/* filters, restyled for the dark band */
+body[data-page="news"] .page-head .filters button {
+  padding: 0.4rem 0.9rem;
+  color: rgba(238, 234, 224, 0.85);
+  border-color: rgba(238, 234, 224, 0.3);
+}
+body[data-page="news"] .page-head .filters button:hover {
+  color: #fff;
+  border-color: #fff;
+}
+body[data-page="news"] .page-head .filters button[aria-pressed="true"] {
+  color: var(--ink);
+  background: var(--ink-text);
+  border-color: var(--ink-text);
+}
+
+/* ---------- timeline ---------- */
+
+body[data-page="news"] .entry {
+  --c: var(--tag-paper);
+  padding: 1.5rem 0 1.5rem 1.75rem;
+  border-left: 4px solid var(--c);
+}
+body[data-page="news"] .entry + .entry { border-top: 0; }
+body[data-page="news"] .entry:first-child { padding-top: 1.5rem; }
+body[data-page="news"] .entry:last-child { padding-bottom: 1.5rem; }
+
+body[data-page="news"] .entry:has(.tag[data-tag="resource"]) { --c: var(--tag-resource); }
+body[data-page="news"] .entry:has(.tag[data-tag="people"])   { --c: var(--tag-people); }
+body[data-page="news"] .entry:has(.tag[data-tag="award"])    { --c: var(--tag-award); }
+
+/* awards are the headline items, so they get a tinted panel */
+body[data-page="news"] .entry:has(.tag[data-tag="award"]) {
+  padding-right: 1.75rem;
+  background: var(--tag-award-bg);
+}
+
+body[data-page="news"] .entry h3 {
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 1.875rem);
+  line-height: 1.2;
+}
+
+/* the date leads each item, so it is set larger than the usual small meta line */
+body[data-page="news"] .kicker .meta {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+@media (max-width: 59.99rem) {
+  body[data-page="news"] .page-head { padding-block: 2.5rem 2.5rem; }
+}
+
+
+/* ---------- hero refinements ---------- */
+
+/* no seam where the band meets the first section */
+.hero + .section { border-top: 0; }
+
+@media (min-width: 60rem) {
+  .hero {
+    /* the logo now starts at the page's left edge, under the wordmark */
+    padding-left: 0;
+    padding-block: 4rem;
+    grid-template-columns: 22rem minmax(0, 1fr);
+  }
+}
+
+/* A soft blue glow behind the logo, so the dark emblem in logo-dark.png reads
+   as a silhouette instead of vanishing into the navy. */
+:root .hero .logo {
+  background:
+    url(../img/logo-dark.png) center / contain no-repeat,
+    radial-gradient(closest-side at 50% 34%, rgba(90, 165, 245, 0.38), transparent) no-repeat;
+}
+
+
+/* ---------- news: readable item text ---------- */
+
+body[data-page="news"] .page-head + .section { border-top: 0; }
+
+/* most news items are a sentence or two with no heading, so the paragraph is the
+   content and is set at reading size, in the serif used for lead text */
+body[data-page="news"] .entry p {
+  max-width: 42rem;
+  font: 400 1.3125rem/1.5 var(--serif);
+}
+body[data-page="news"] .entry h3 + p,
+body[data-page="news"] .entry .kicker + p { margin-top: 0.6rem; }
+
+body[data-page="news"] .more-lines { font: 400 1.125rem/1.5 var(--serif); }
+
+body[data-page="news"] .tag {
+  padding: 0.3rem 0.55rem;
+  font-size: 0.75rem;
+}
+body[data-page="news"] .kicker { gap: 0.5rem 1rem; }
+body[data-page="news"] .links { font-size: 1rem; }
+
+@media (max-width: 39.99rem) {
+  body[data-page="news"] .entry p { font-size: 1.1875rem; }
+}
