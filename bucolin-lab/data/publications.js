@@ -23,7 +23,7 @@ const PUBLICATIONS = [
     year: 2026,
     authors: 'Dilara Zeynep Gürer, Esma F. Bilgin Taşdemir, and Şaziye Betül Özateş',
     title: 'RuznamceNER: Named Entity Recognition Dataset for Ottoman Turkish',
-    url: 'https://aclanthology.org/2026.lrec-1.126.pdf'
+    url: 'https://aclanthology.org/2026.lrec-1.126.pdf',
     venue: 'LREC 2026.',
   },
   {
@@ -31,7 +31,7 @@ const PUBLICATIONS = [
     year: 2026,
     authors: 'Tarık Emre Tıraş, N. Cüneyd Ünal, Ada Cengiz, Ece Yurtseven, Esma F. Bilgin Taşdemir, and Şaziye Betül Özateş',
     title: 'OTA-BOUN: A Historical Turkish Dependency Treebank',
-    url: 'https://aclanthology.org/2026.lrec-1.551.pdf'
+    url: 'https://aclanthology.org/2026.lrec-1.551.pdf',
     venue: 'LREC 2026.',
   },
   {
