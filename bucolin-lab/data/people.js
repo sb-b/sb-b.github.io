@@ -36,7 +36,6 @@ const PHD_STUDENTS = [
 ];
 
 const MS_STUDENTS = [
-  { name: 'Ece Elif Adak', advisors: ['ozates'] },
   { name: 'Necip Fazıl Ergün', advisors: ['ozates', 'atlamaz'] },
   { name: 'Kutsal Gündüz', advisors: ['ozates'] },
   { name: 'Ahmet Gürbüz', advisors: ['ozates'] },
@@ -79,6 +78,20 @@ const HIGH_SCHOOL_STUDENTS = [
 ];
 
 const ALUMNI = [
+      {
+    name: 'Şükrü Onur Yiğit',
+    year: 2026,
+    degree: { en: `MS`, tr: `Yüksek Lisans` },
+    thesis: 'Multilingual IT Support Tickets Classification via Applying Deep Learning- Based Topic Modeling Techniques',
+    advisors: ['ozates'],
+  },
+    {
+    name: 'Ece Elif Adak',
+    year: 2026,
+    degree: { en: `MS`, tr: `Yüksek Lisans` },
+    thesis: 'Exploring the Relationship Between X/Twitter Activity and Stock Market Performance of BIST100 Index in Turkiye',
+    advisors: ['ozates'],
+  },
   {
     name: 'Enes Köser',
     year: 2026,
