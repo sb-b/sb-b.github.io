@@ -307,3 +307,13 @@ body[data-page="publications"] .reference .title { font-size: 1.3125rem; }
 
 /* research: project descriptions */
 body:is([data-page="research"], [data-page="projects"]) .entry p { max-width: 44rem; }
+
+
+/* ---------- hero description: justified ---------- */
+
+.hero .lead {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;        /* needs the page's lang attribute; avoids wide gaps */
+  -webkit-hyphens: auto;
+}
