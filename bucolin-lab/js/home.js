@@ -6,8 +6,9 @@ function homePage() {
       <h1 class="logo"><span class="sr-only" lang="en">${esc(LAB.name)}, ${esc(LAB.longName)}</span></h1>
       <p class="lead">${esc(loc(LAB.intro))}</p>
       <p class="links">
-        <a href="research.html">${t('nav.research')}</a>
         <a href="people.html">${t('nav.people')}</a>
+        <a href="research.html">${t('nav.publications')}</a>
+        <a href="research.html">${t('nav.research')}</a>
       </p>
     </div>
 
