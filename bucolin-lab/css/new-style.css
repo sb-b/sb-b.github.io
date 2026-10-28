@@ -155,3 +155,88 @@ body { overflow-x: clip; }
   /* the arcs had their room beside the logo; with the new layout they are hidden */
   .hero::after { display: none; }
 }
+
+
+/* ====================================================================
+   NEWS PAGE (body[data-page="news"])
+   A navy title band like the home hero, then a timeline where the colour
+   of each item's left edge is its category (the same colours as the tags).
+   ==================================================================== */
+
+/* ---------- title band ---------- */
+
+body[data-page="news"] .page-head {
+  position: relative;
+  isolation: isolate;
+  padding-block: 4rem 3.5rem;
+  color: var(--ink-text);
+  clip-path: inset(0 -100vmax);
+}
+body[data-page="news"] .page-head::before {
+  content: "";
+  position: absolute;
+  inset: 0 -100vmax;
+  z-index: -1;
+  background:
+    radial-gradient(34rem 18rem at calc(50% + 20rem) 100%, rgba(47, 111, 216, 0.4), transparent 70%),
+    var(--ink);
+}
+body[data-page="news"] .page-head h1 {
+  font-size: clamp(3.25rem, 2rem + 6vw, 6.5rem);
+  letter-spacing: -0.03em;
+}
+body[data-page="news"] .page-head .gloss { color: rgba(238, 234, 224, 0.65); }
+body[data-page="news"] .page-head .lead { color: var(--ink-text); }
+
+/* filters, restyled for the dark band */
+body[data-page="news"] .page-head .filters button {
+  padding: 0.4rem 0.9rem;
+  color: rgba(238, 234, 224, 0.85);
+  border-color: rgba(238, 234, 224, 0.3);
+}
+body[data-page="news"] .page-head .filters button:hover {
+  color: #fff;
+  border-color: #fff;
+}
+body[data-page="news"] .page-head .filters button[aria-pressed="true"] {
+  color: var(--ink);
+  background: var(--ink-text);
+  border-color: var(--ink-text);
+}
+
+/* ---------- timeline ---------- */
+
+body[data-page="news"] .entry {
+  --c: var(--tag-paper);
+  padding: 1.5rem 0 1.5rem 1.75rem;
+  border-left: 4px solid var(--c);
+}
+body[data-page="news"] .entry + .entry { border-top: 0; }
+body[data-page="news"] .entry:first-child { padding-top: 1.5rem; }
+body[data-page="news"] .entry:last-child { padding-bottom: 1.5rem; }
+
+body[data-page="news"] .entry:has(.tag[data-tag="resource"]) { --c: var(--tag-resource); }
+body[data-page="news"] .entry:has(.tag[data-tag="people"])   { --c: var(--tag-people); }
+body[data-page="news"] .entry:has(.tag[data-tag="award"])    { --c: var(--tag-award); }
+
+/* awards are the headline items, so they get a tinted panel */
+body[data-page="news"] .entry:has(.tag[data-tag="award"]) {
+  padding-right: 1.75rem;
+  background: var(--tag-award-bg);
+}
+
+body[data-page="news"] .entry h3 {
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 1.875rem);
+  line-height: 1.2;
+}
+
+/* the date leads each item, so it is set larger than the usual small meta line */
+body[data-page="news"] .kicker .meta {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+@media (max-width: 59.99rem) {
+  body[data-page="news"] .page-head { padding-block: 2.5rem 2.5rem; }
+}
