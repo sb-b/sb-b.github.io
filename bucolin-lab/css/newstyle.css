@@ -158,21 +158,21 @@ body { overflow-x: clip; }
 
 
 /* ====================================================================
-   INNER PAGES (news, people, publications, research)
+   INNER PAGES (news, people, publications, projects)
    A navy title band like the home hero, then a timeline where the colour
    of each item's left edge is its category (the same colours as the tags).
    ==================================================================== */
 
 /* ---------- title band ---------- */
 
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .page-head {
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .page-head {
   position: relative;
   isolation: isolate;
   padding-block: 4rem 3.5rem;
   color: var(--ink-text);
   clip-path: inset(0 -100vmax);
 }
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .page-head::before {
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .page-head::before {
   content: "";
   position: absolute;
   inset: 0 -100vmax;
@@ -181,24 +181,24 @@ body:is([data-page="news"], [data-page="people"], [data-page="publications"], [d
     radial-gradient(34rem 18rem at calc(50% + 20rem) 100%, rgba(47, 111, 216, 0.4), transparent 70%),
     var(--ink);
 }
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .page-head h1 {
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .page-head h1 {
   font-size: clamp(2.75rem, 1.8rem + 3.2vw, 4.5rem);
   letter-spacing: -0.025em;
 }
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .page-head .gloss { color: rgba(238, 234, 224, 0.65); }
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .page-head .lead { color: var(--ink-text); }
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .page-head .gloss { color: rgba(238, 234, 224, 0.65); }
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .page-head .lead { color: var(--ink-text); }
 
 /* filters, restyled for the dark band */
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .page-head .filters button {
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .page-head .filters button {
   padding: 0.4rem 0.9rem;
   color: rgba(238, 234, 224, 0.85);
   border-color: rgba(238, 234, 224, 0.3);
 }
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .page-head .filters button:hover {
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .page-head .filters button:hover {
   color: #fff;
   border-color: #fff;
 }
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .page-head .filters button[aria-pressed="true"] {
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .page-head .filters button[aria-pressed="true"] {
   color: var(--ink);
   background: var(--ink-text);
   border-color: var(--ink-text);
@@ -206,39 +206,39 @@ body:is([data-page="news"], [data-page="people"], [data-page="publications"], [d
 
 /* ---------- timeline ---------- */
 
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .entry {
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .entry {
   --c: var(--tag-paper);
   padding: 1.5rem 0 1.5rem 1.75rem;
   border-left: 4px solid var(--c);
 }
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .entry + .entry { border-top: 0; }
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .entry:first-child { padding-top: 1.5rem; }
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .entry:last-child { padding-bottom: 1.5rem; }
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .entry + .entry { border-top: 0; }
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .entry:first-child { padding-top: 1.5rem; }
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .entry:last-child { padding-bottom: 1.5rem; }
 
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .entry:has(.tag[data-tag="resource"]) { --c: var(--tag-resource); }
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .entry:has(.tag[data-tag="people"])   { --c: var(--tag-people); }
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .entry:has(.tag[data-tag="award"])    { --c: var(--tag-award); }
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .entry:has(.tag[data-tag="resource"]) { --c: var(--tag-resource); }
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .entry:has(.tag[data-tag="people"])   { --c: var(--tag-people); }
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .entry:has(.tag[data-tag="award"])    { --c: var(--tag-award); }
 
 /* awards are the headline items, so they get a tinted panel */
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .entry:has(.tag[data-tag="award"]) {
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .entry:has(.tag[data-tag="award"]) {
   padding-right: 1.75rem;
   background: var(--tag-award-bg);
 }
 
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .entry h3 {
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .entry h3 {
   font-size: clamp(1.5rem, 1.2rem + 1vw, 1.875rem);
   line-height: 1.2;
 }
 
 /* the date leads each item, so it is set larger than the usual small meta line */
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .kicker .meta {
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .kicker .meta {
   font-size: 0.9375rem;
   font-weight: 500;
   color: var(--text);
 }
 
 @media (max-width: 59.99rem) {
-  body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .page-head { padding-block: 2.5rem 2.5rem; }
+  body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .page-head { padding-block: 2.5rem 2.5rem; }
 }
 
 
@@ -267,28 +267,28 @@ body:is([data-page="news"], [data-page="people"], [data-page="publications"], [d
 
 /* ---------- news: readable item text ---------- */
 
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .page-head + .section { border-top: 0; }
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .page-head + .section { border-top: 0; }
 
 /* most news items are a sentence or two with no heading, so the paragraph is the
    content and is set at reading size, in the serif used for lead text */
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .entry p {
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .entry p {
   max-width: 42rem;
   font: 400 1.3125rem/1.5 var(--serif);
 }
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .entry h3 + p,
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .entry .kicker + p { margin-top: 0.6rem; }
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .entry h3 + p,
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .entry .kicker + p { margin-top: 0.6rem; }
 
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .more-lines { font: 400 1.125rem/1.5 var(--serif); }
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .more-lines { font: 400 1.125rem/1.5 var(--serif); }
 
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .tag {
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .tag {
   padding: 0.3rem 0.55rem;
   font-size: 0.75rem;
 }
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .kicker { gap: 0.5rem 1rem; }
-body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .links { font-size: 1rem; }
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .kicker { gap: 0.5rem 1rem; }
+body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .links { font-size: 1rem; }
 
 @media (max-width: 39.99rem) {
-  body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="research"]) .entry p { font-size: 1.1875rem; }
+  body:is([data-page="news"], [data-page="people"], [data-page="publications"], [data-page="projects"]) .entry p { font-size: 1.1875rem; }
 }
 
 
@@ -305,5 +305,5 @@ body[data-page="people"] .people.faculty p { font-size: 1.1875rem; }
 body[data-page="publications"] .reference { font-size: 1.125rem; line-height: 1.55; max-width: 48rem; }
 body[data-page="publications"] .reference .title { font-size: 1.3125rem; }
 
-/* research: project descriptions */
-body[data-page="research"] .entry p { max-width: 44rem; }
+/* projects: project descriptions */
+body[data-page="projects"] .entry p { max-width: 44rem; }
