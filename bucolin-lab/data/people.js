@@ -42,7 +42,6 @@ const MS_STUDENTS = [
   { name: 'Elifnur Polat', advisors: ['ozates'] },
   { name: 'Mustafa Alperen Öztürk', advisors: ['ozates'] },
   { name: 'Kevser Taştan', advisors: ['ozates'] },
-  { name: 'Şükrü Onur Yiğit', advisors: ['ozates'] },
 ];
 
 const BACHELOR_STUDENTS = [
