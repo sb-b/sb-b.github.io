@@ -11,8 +11,8 @@ const LAB = {
 
   // the English intro is also written out in index.html, in the <noscript> block
   intro: {
-    en: `Founded in 2023, our Computational Linguistics Laboratory at Boğaziçi University focuses on natural language processing, deep learning, and computational social science. We develop advanced models and tools to analyze language, from historical texts to modern applications, bridging technology and linguistics.`,
-    tr: `2023’te kurulan, Boğaziçi Üniversitesi’ndeki hesaplamalı dilbilim laboratuvarımız doğal dil işleme, derin öğrenme ve hesaplamalı sosyal bilimlere odaklanıyor. Tarihi metinlerden modern uygulamalara kadar dili çözümlemek için ileri düzey modeller ve araçlar geliştiriyor, teknoloji ile dilbilim arasında köprü kuruyoruz.`,
+    en: `Founded in 2023, our Computational Linguistics Laboratory at Boğaziçi University focuses on natural language processing, machine learning and deep learning applications, and computational social science. We develop advanced models and tools for analysis and prediction across diverse data, from historical sources to modern applications, bridging technology, linguistics, and the social sciences.`,
+    tr: `2023 yılında kurulan Boğaziçi Üniversitesi Hesaplamalı Dilbilim Laboratuvarı; doğal dil işleme, makine öğrenmesi ve derin öğrenme uygulamaları ile hesaplamalı sosyal bilimler alanlarına odaklanmaktadır. BUCOLIN Lab'da tarihsel kaynaklardan modern uygulamalara uzanan çeşitli veriler üzerinde analiz ve tahmin için gelişmiş modeller ve araçlar geliştiriyor; teknoloji, dilbilim ve sosyal bilimler arasında köprü kuruyoruz.`,
   },
 
   institute: {
