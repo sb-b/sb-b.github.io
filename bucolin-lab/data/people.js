@@ -50,7 +50,7 @@ const MS_STUDENTS = [
   { name: 'Elifnur Polat', advisors: ['ozates'] },
   { name: 'Mustafa Alperen Öztürk', advisors: ['ozates'] },
   { name: 'Kevser Taştan', advisors: ['ozates'] },
-  { name: 'Zeynep Gömleksiz' },
+  { name: 'Zeynep Gömleksiz', advisors: ['ozates'] },
   { name: 'Mehmet Altunören' },
 ];
 
