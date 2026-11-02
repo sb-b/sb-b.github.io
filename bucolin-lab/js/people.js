@@ -21,10 +21,11 @@ function facultyMember(member) {
 }
 
 function student(person) {
+  const name = person.url ? out(person.name, person.url) : esc(person.name);
   const line = advisorLine(person.advisors) || esc(loc(person.from));
   return `
     <li class="person">
-      <p class="name">${esc(person.name)}</p>
+      <p class="name">${name}</p>
       ${line ? `<p>${line}</p>` : ''}
     </li>`;
 }

@@ -3,7 +3,8 @@
 // Faculty:   id, name, role, and url if their name should link to a profile page.
 //            The Turkish wording for "Co-Supervisor" has not been settled yet,
 //            so it has no tr and shows in English for now.
-// Students:  name, and then either advisors or from.
+// Students:  name, and then either advisors or from. url is optional and makes the
+//            name a link, for example to a Google Scholar profile.
 //            advisors is a list of faculty ids, so an advisor's name is typed once.
 //            from is the school or department, for students from outside the institute.
 // Alumni:    name, plus any of degree, year, thesis, advisors and now.
@@ -42,6 +43,8 @@ const MS_STUDENTS = [
   { name: 'Elifnur Polat', advisors: ['ozates'] },
   { name: 'Mustafa Alperen Öztürk', advisors: ['ozates'] },
   { name: 'Kevser Taştan', advisors: ['ozates'] },
+  { name: 'Zeynep Gömleksiz' },
+  { name: 'Mehmet Altunören' },
 ];
 
 const BACHELOR_STUDENTS = [
@@ -59,6 +62,26 @@ const BACHELOR_STUDENTS = [
       en: `German Translation and Interpreting, Hacettepe University`,
       tr: `Almanca Mütercim ve Tercümanlık, Hacettepe Üniversitesi`,
     },
+  },
+  {
+    name: 'Derin Lal Özoğuz',
+    from: { en: `Dept. of Linguistics`, tr: `Dilbilimi Bölümü` },
+  },
+  {
+    name: 'Mehmet Ali Dereli',
+    url: 'https://scholar.google.com/citations?user=leCRtBoAAAAJ',
+    from: {
+      en: `Translation Studies, Yeditepe University`,
+      tr: `Çeviribilim, Yeditepe Üniversitesi`,
+    },
+  },
+  {
+    name: 'Yusuf Öztop',
+    from: { en: `Dept. of Translation and Interpreting Studies`, tr: `Çeviribilimi Bölümü` },
+  },
+  {
+    name: 'Fatma Nisa Çınarlı',
+    from: { en: `Dept. of Linguistics`, tr: `Dilbilimi Bölümü` },
   },
 ];
 
