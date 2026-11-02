@@ -85,6 +85,7 @@ const BACHELOR_STUDENTS = [
   {
     name: 'Yusuf Öztop',
     from: { en: `Dept. of Translation and Interpreting Studies`, tr: `Çeviribilimi Bölümü` },
+    links: [{ label: 'ACL Anthology', url: 'https://aclanthology.org/people/yusuf-oztop/unverified/' }],
   },
   {
     name: 'Fatma Nisa Çınarlı',
