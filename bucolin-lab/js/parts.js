@@ -15,6 +15,7 @@ function reference(paper) {
   return `<p class="reference" id="${paper.id}" lang="en">${esc(paper.authors)}. ${paper.year}. ${title}. ${esc(paper.venue)}</p>`;
 }
 
+// the news page draws its items with its own, larger version of this (newsItem in news.js)
 function newsEntry(item) {
   const tag = `<span class="tag" data-tag="${item.tag}">${t('tag.' + item.tag)}</span>`;
   const when = item.date ? `<span class="meta">${formatDate(String(item.date))}</span>` : '';

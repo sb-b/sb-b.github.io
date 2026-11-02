@@ -1,0 +1,131 @@
+/* The news page as a timeline: a thin line down the left, each item on a round
+   node that carries the icon of its kind, and each item's first sentence set
+   larger than the rest. Loaded after newstyle.css, on news.html only. */
+
+body[data-page="news"] {
+  --node: 2.25rem;
+}
+
+
+/* ---------- filter buttons: an icon and a count ---------- */
+
+body[data-page="news"] .filters button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+body[data-page="news"] .filters svg { flex: none; }
+body[data-page="news"] .filters .n {
+  font: 400 0.75rem/1 var(--mono);
+  opacity: 0.8;
+}
+
+
+/* ---------- the timeline ---------- */
+
+body[data-page="news"] .item {
+  --c: var(--tag-paper);
+  --top: 2.25rem;
+  position: relative;
+  padding: var(--top) 0 0 calc(var(--node) + 1.25rem);
+}
+body[data-page="news"] .item:first-child { --top: 0rem; }
+
+body[data-page="news"] .item[data-tag="award"]    { --c: var(--tag-award); }
+body[data-page="news"] .item[data-tag="people"]   { --c: var(--tag-people); }
+body[data-page="news"] .item[data-tag="resource"] { --c: var(--tag-resource); }
+
+/* The line is drawn a piece per item, the height of the item, so that it can
+   start at the first node and stop at the last. */
+body[data-page="news"] .item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--node) / 2 - 0.5px);
+  border-left: 1px solid var(--border);
+}
+body[data-page="news"] .item:first-child::before { top: calc(var(--node) / 2); }
+body[data-page="news"] .item:last-child::before { bottom: auto; height: var(--top); }
+
+body[data-page="news"] .node {
+  position: absolute;
+  top: var(--top);
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: var(--node);
+  height: var(--node);
+  border: 1px solid var(--c);
+  border-radius: 50%;
+  color: var(--c);
+  background: var(--bg);
+}
+body[data-page="news"] .node svg { width: 1.125rem; height: 1.125rem; }
+
+/* awards: a filled node with a ring round it, like a medal */
+body[data-page="news"] .item[data-tag="award"] .node {
+  color: var(--bg);
+  background: var(--c);
+  outline: 1px solid var(--c);
+  outline-offset: 3px;
+}
+
+/* the item someone was linked to (news.html#id) */
+body[data-page="news"] .item:target .node {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* the kind of news, as a word next to its node */
+body[data-page="news"] .item .kicker { min-height: var(--node); }
+body[data-page="news"] .item .tag {
+  padding: 0;
+  font: 500 0.75rem/1 var(--mono);
+  letter-spacing: 0.08em;
+  color: var(--c);
+  background: none;
+}
+
+body[data-page="news"] .item .kicker + .first { margin-top: 0.35rem; }
+
+/* larger rather than bold, so the words the item itself sets in bold still stand out */
+body[data-page="news"] .item .first {
+  max-width: 40rem;
+  font: 400 clamp(1.25rem, 1.1rem + 0.45vw, 1.375rem)/1.38 var(--serif);
+  color: var(--text);
+}
+/* only weights 400 and 600 of the serif are loaded */
+body[data-page="news"] .item .first strong { font-weight: 600; }
+
+body[data-page="news"] .item .rest {
+  max-width: 40rem;
+  margin-top: 0.4rem;
+  font: 400 1.125rem/1.55 var(--serif);
+  color: var(--muted);
+}
+
+body[data-page="news"] .item .more-lines {
+  max-width: 40rem;
+  margin-top: 0.75rem;
+  padding-left: 1rem;
+  border-left: 1px solid var(--border);
+  font: 400 1.0625rem/1.5 var(--serif);
+  color: var(--muted);
+}
+
+@media (min-width: 40rem) {
+  body[data-page="news"] .item .first { text-wrap: pretty; }
+}
+
+@media (max-width: 39.99rem) {
+  body[data-page="news"] { --node: 1.75rem; }
+  body[data-page="news"] .item { --top: 1.75rem; padding-left: calc(var(--node) + 0.75rem); }
+  body[data-page="news"] .item .first { font-size: 1.1875rem; }
+  body[data-page="news"] .item .rest { font-size: 1.0625rem; }
+  body[data-page="news"] .item .more-lines { font-size: 1rem; }
+}
+
+@media print {
+  body[data-page="news"] .item { break-inside: avoid; }
+}
