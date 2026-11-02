@@ -38,7 +38,7 @@ const NEWS = [
     id: 'first-ms-graduate',
     tag: 'people',
     body: {
-      en: `BUCOLIN Lab proudly celebrates its first-ever M.S. graduate, **Enes Köser**, who successfully defended his thesis titled "Deep Learning-Based Public Transport Demand Forecasting." Big kudos to Enes!`,
+      en: `BUCOLIN Lab proudly celebrates its first-ever M.S. graduate, **Enes Köser**, who successfully defended his thesis titled "Deep Learning-Based Public Transport Demand Forecasting." Congratulations to Enes!`,
       tr: `BUCOLIN Lab, ilk yüksek lisans mezununu gururla kutluyor: **Enes Köser**, "{en|Deep Learning-Based Public Transport Demand Forecasting}" başlıklı tezini başarıyla savundu. Tebrikler, Enes!`,
     },
   },
