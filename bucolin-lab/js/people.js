@@ -21,12 +21,13 @@ function facultyMember(member) {
 }
 
 function student(person) {
-  const name = person.url ? out(person.name, person.url) : esc(person.name);
   const line = advisorLine(person.advisors) || esc(loc(person.from));
+  const links = (person.links || []).map(link => out(link.label, link.url));
   return `
     <li class="person">
-      <p class="name">${name}</p>
+      <p class="name">${esc(person.name)}</p>
       ${line ? `<p>${line}</p>` : ''}
+      ${links.length ? `<p class="links">${links.join('')}</p>` : ''}
     </li>`;
 }
 

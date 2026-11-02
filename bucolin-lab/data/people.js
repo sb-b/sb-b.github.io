@@ -3,8 +3,8 @@
 // Faculty:   id, name, role, and url if their name should link to a profile page.
 //            The Turkish wording for "Co-Supervisor" has not been settled yet,
 //            so it has no tr and shows in English for now.
-// Students:  name, and then either advisors or from. url is optional and makes the
-//            name a link, for example to a Google Scholar profile.
+// Students:  name, and then either advisors or from. links is optional: a list of
+//            { label, url } for the person's own pages (GitHub, Google Scholar, ...).
 //            advisors is a list of faculty ids, so an advisor's name is typed once.
 //            from is the school or department, for students from outside the institute.
 // Alumni:    name, plus any of degree, year, thesis, advisors and now.
@@ -33,7 +33,14 @@ const FACULTY = [
 
 const PHD_STUDENTS = [
   { name: 'Dilara Zeynep Gürer', advisors: ['ozates', 'atlamaz'] },
-  { name: 'Nureddin Cüneyd Ünal', advisors: ['ozates'] },
+  {
+    name: 'Nureddin Cüneyd Ünal',
+    advisors: ['ozates'],
+    links: [
+      { label: 'GitHub', url: 'https://github.com/nurcunal' },
+      { label: 'ACL Anthology', url: 'https://aclanthology.org/people/nureddin-cuneyd-unal/' },
+    ],
+  },
 ];
 
 const MS_STUDENTS = [
@@ -69,7 +76,7 @@ const BACHELOR_STUDENTS = [
   },
   {
     name: 'Mehmet Ali Dereli',
-    url: 'https://scholar.google.com/citations?user=leCRtBoAAAAJ',
+    links: [{ label: 'Google Scholar', url: 'https://scholar.google.com/citations?user=leCRtBoAAAAJ' }],
     from: {
       en: `Translation Studies, Yeditepe University`,
       tr: `Çeviribilim, Yeditepe Üniversitesi`,

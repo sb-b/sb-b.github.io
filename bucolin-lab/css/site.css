@@ -488,6 +488,7 @@ main > .section:last-child { padding-bottom: 5rem; }
 .person .name { font: 600 1.1875rem/1.3 var(--serif); color: var(--text); }
 .person p { font-size: 0.9375rem; color: var(--muted); }
 .person a { color: inherit; }
+.person .links { margin-top: 0.3rem; }
 .person a:hover { color: var(--link); }
 .person .name a { text-decoration: none; }
 .person .name a:hover { text-decoration: underline; }
