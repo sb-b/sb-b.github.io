@@ -13,7 +13,7 @@ function homePage() {
     </div>
 
     ${section(t('home.news'),
-      NEWS.slice(0, 3).map(newsEntry).join('') + more('news.html', 'home.allNews'))}
+      `<div class="timeline">${NEWS.slice(0, 3).map(newsItem).join('')}</div>` + more('news.html', 'home.allNews'))}
 
     ${section(t('research.ongoing'),
       ONGOING_PROJECTS.map(projectEntry).join('') + more('research.html', 'home.allResearch'))}
