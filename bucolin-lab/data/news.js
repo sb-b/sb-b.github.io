@@ -16,6 +16,15 @@
 //                                  so that screen readers pronounce it as English
 
 const NEWS = [
+ {
+    id: 'csn-2026-paper',
+    tag: 'paper',
+    body: {
+      en: `Dilara Zeynep Gürer presented her paper titled "Standards-Aligned Synthetic Intent Generation Framework for Network Slicing toward Agentic Network Management" at the 2026 IEEE Conference on Standards for Communications and Networking (CSCN 2026), held in London, United Kingdom, on 7–9 September 2026. You can access the paper [here](https://ieeexplore.ieee.org/document/11772001). Congratulations, Dilara!`,
+      tr: `Dilara Zeynep Gürer "Standards-Aligned Synthetic Intent Generation Framework for Network Slicing toward Agentic Network Management" başlıklı çalışmasını 7-9 Eylül 2026'da Londra'da gerçekleşen 2026 IEEE Conference on Standards for Communications and Networking (CSCN 2026)'te sundu. Makaleye [bu linkten](https://ieeexplore.ieee.org/document/11772001) ulaşabilirsiniz. Tebrikler, Dilara!`,
+      },
+
+ The paper, 
   {
     id: 'lrec-2026-papers',
     tag: 'paper',
