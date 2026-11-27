@@ -56,7 +56,7 @@ const NEWS = [
   {
     id: 'eacl-2026',
     tag: 'paper',
-    image: "img/news/eacl_2026_alperen.jpeg"
+    image: "img/news/eacl_2026_alperen.jpeg",
     body: {
       en: `Our recent work titled "Automated Screening of Antibacterial Nanoparticle Literature: Dataset Curation and Model Evaluation" co-authored with Alperen Öztürk, E. Sümeyra Turali-Emre, and colleagues from University of Michigan has been accepted to [EACL 2026](https://2026.eacl.org/) **Main Conference**! You can access the paper [here](https://aclanthology.org/2026.eacl-long.20/).`,
       tr: `Alperen Öztürk, E. Sümeyra Turali-Emre ve Michigan Üniversitesi’nden meslektaşlarımızla birlikte yazdığımız "{en|Automated Screening of Antibacterial Nanoparticle Literature: Dataset Curation and Model Evaluation}" başlıklı son çalışmamız [EACL 2026](https://2026.eacl.org/) **ana konferansına** kabul edildi! Bildiriye [buradan](https://aclanthology.org/2026.eacl-long.20/) ulaşabilirsiniz.`,
