@@ -387,16 +387,18 @@ body:not([data-page="home"]) .entry:last-child { padding: 1.25rem 1.5rem; }
 
 .news-slide-media {
   position: relative;
-  min-height: 19rem;
+  height: 22rem;          /* locks all slides to the same clean height */
   background: var(--ink);
   overflow: hidden;
 }
 
 .news-slide-media img {
-  display: block;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 25%; /* keeps faces/upper half from getting cropped */
 }
 
 /* Fallback if a news item does not have an image yet */
