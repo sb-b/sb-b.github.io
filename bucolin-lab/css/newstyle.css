@@ -381,29 +381,41 @@ body:not([data-page="home"]) .entry:last-child { padding: 1.25rem 1.5rem; }
   flex: 0 0 100%;
   min-width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  /* Narrower image column (~square) so portrait and landscape images both fit well */
+  grid-template-columns: 22rem minmax(0, 1fr);
   align-items: stretch;
 }
 
 .news-slide-media {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 18rem;          /* adjust to 15rem or 16rem if you want it even smaller */
-  padding: 0.75rem;
-  background: var(--bg);  /* soft frame around portrait/wide photos */
-  overflow: hidden;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 20rem !important;
+  padding: 0.75rem !important;
+  background: linear-gradient(135deg, #0a1230 0%, #162a5a 100%) !important;
+  overflow: hidden !important;
 }
 
 .news-slide-media img {
-  position: static;
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+  position: static !important;
+  inset: auto !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
   border-radius: 4px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 52rem) {
+  .news-slide {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .news-slide-media {
+    height: 15rem !important;
+  }
 }
 
 /* Fallback if a news item does not have an image yet */
