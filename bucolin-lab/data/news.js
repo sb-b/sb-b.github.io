@@ -66,15 +66,15 @@ const NEWS = [
     id: 'first-ms-graduate',
     tag: 'people',
     body: {
-      en: `BUCOLIN Lab proudly celebrates its first-ever M.S. graduate, **Enes Köser**, who successfully defended his thesis titled "Deep Learning-Based Public Transport Demand Forecasting." Congratulations to Enes!`,
-      tr: `BUCOLIN Lab, ilk yüksek lisans mezununu gururla kutluyor: **Enes Köser**, "{en|Deep Learning-Based Public Transport Demand Forecasting}" başlıklı tezini başarıyla savundu. Tebrikler, Enes!`,
+      en: `BUCOLIN Lab proudly celebrates its first-ever M.S. graduate, **Enes Köser**! Enes successfully defended his thesis titled "Deep Learning-Based Public Transport Demand Forecasting." Congratulations to Enes!`,
+      tr: `BUCOLIN Lab, ilk yüksek lisans mezununu gururla kutluyor: **Enes Köser**! Enes "{en|Deep Learning-Based Public Transport Demand Forecasting}" başlıklı tezini başarıyla savundu. Tebrikler, Enes!`,
     },
   },
   {
     id: 'naacl-srw-2025-award',
     tag: 'award',
     body: {
-      en: `Dilara Zeynep Gürer has been awarded the **Best Thesis Award** at [NAACL SRW 2025](https://naacl2025-srw.github.io/) for her groundbreaking thesis proposal titled "Text Extraction and Script Completion in Images of Arabic Script-Based Calligraphy". Congratulations to Dilara! You can access the paper [here](https://aclanthology.org/2025.naacl-srw.25/).`,
+      en: `Dilara Zeynep Gürer has been awarded the **Best Thesis Award** at [NAACL SRW 2025](https://naacl2025-srw.github.io/)! She received the award for her groundbreaking thesis proposal titled "Text Extraction and Script Completion in Images of Arabic Script-Based Calligraphy". Congratulations to Dilara! You can access the paper [here](https://aclanthology.org/2025.naacl-srw.25/).`,
       tr: `Dilara Zeynep Gürer, "{en|Text Extraction and Script Completion in Images of Arabic Script-Based Calligraphy}" başlıklı çığır açıcı tez önerisiyle [NAACL SRW 2025](https://naacl2025-srw.github.io/)’te **En İyi Tez Ödülü**’ne layık görüldü. Tebrikler, Dilara! Bildiriye [buradan](https://aclanthology.org/2025.naacl-srw.25/) ulaşabilirsiniz.`,
     },
   },
@@ -82,7 +82,7 @@ const NEWS = [
     id: 'smm4h-2025',
     tag: 'award',
     body: {
-      en: `Ece Elif Adak won first place in [SMM4H-HeaRD 2025](https://healthlanguageprocessing.org/smm4h-2025/) Shared Task 3, successfully detecting dementia family caregivers on Twitter. Awesome work, Elif! You can access the paper [here](https://workshop-proceedings.icwsm.org/pdf/2025_58.pdf).`,
+      en: `Ece Elif Adak won first place in [SMM4H-HeaRD 2025](https://healthlanguageprocessing.org/smm4h-2025/) Shared Task 3! Her model successfully detects dementia family caregivers on Twitter. Awesome work, Elif! You can access the paper [here](https://workshop-proceedings.icwsm.org/pdf/2025_58.pdf).`,
       tr: `Ece Elif Adak, [SMM4H-HeaRD 2025](https://healthlanguageprocessing.org/smm4h-2025/) {en|Shared Task 3}’te, demans hastalarına bakım veren aile üyelerini Twitter’da başarıyla tespit ederek birinci oldu. Harika iş çıkardın, Elif! Bildiriye [buradan](https://workshop-proceedings.icwsm.org/pdf/2025_58.pdf) ulaşabilirsiniz.`,
     },
   },
