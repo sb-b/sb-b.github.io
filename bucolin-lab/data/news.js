@@ -30,7 +30,7 @@ const NEWS = [
     tag: 'paper',
     image: "img/news/cscn_2026_dilara.jpg",
     body: {
-      en: `Dilara Zeynep Gürer presented her paper at IEEE CSCN 2026. The paper, titled "Standards-Aligned Synthetic Intent Generation Framework for Network Slicing toward Agentic Network Management", was presented at the 2026 IEEE Conference on Standards for Communications and Networking (CSCN 2026), held in London, United Kingdom, on 7–9 September 2026. You can access the paper [here](https://ieeexplore.ieee.org/document/11772001). Congratulations, Dilara!`,
+      en: `Dilara Zeynep Gürer presented her paper at [IEEE CSCN 2026](https://cscn2026.ieee-cscn.org/). The paper, titled "Standards-Aligned Synthetic Intent Generation Framework for Network Slicing toward Agentic Network Management", was presented at the 2026 IEEE Conference on Standards for Communications and Networking (CSCN 2026), held in London, United Kingdom, on 7–9 September 2026. You can access the paper [here](https://ieeexplore.ieee.org/document/11772001). Congratulations, Dilara!`,
       tr: `Dilara Zeynep Gürer "Standards-Aligned Synthetic Intent Generation Framework for Network Slicing toward Agentic Network Management" başlıklı çalışmasını 7-9 Eylül 2026'da Londra'da gerçekleşen 2026 IEEE Conference on Standards for Communications and Networking (CSCN 2026)'te sundu. Makaleye [bu linkten](https://ieeexplore.ieee.org/document/11772001) ulaşabilirsiniz. Tebrikler, Dilara!`,
     },
   },
@@ -59,7 +59,7 @@ const NEWS = [
     image: "img/news/eacl_2026_alperen.jpeg",
     body: {
       en: `Paper accepted to EACL 2026 Main Conference! Our recent work titled "Automated Screening of Antibacterial Nanoparticle Literature: Dataset Curation and Model Evaluation" co-authored with Alperen Öztürk, E. Sümeyra Turali-Emre, and colleagues from University of Michigan has been accepted to [EACL 2026](https://2026.eacl.org/) **Main Conference**! You can access the paper [here](https://aclanthology.org/2026.eacl-long.20/).`,
-      tr: `Makalemiz EACL 2026 Konferansina kabul edildi. Alperen Öztürk, E. Sümeyra Turali-Emre ve Michigan Üniversitesi’nden meslektaşlarımızla birlikte yazdığımız "{en|Automated Screening of Antibacterial Nanoparticle Literature: Dataset Curation and Model Evaluation}" başlıklı son çalışmamız [EACL 2026](https://2026.eacl.org/) **ana konferansına** kabul edildi! Bildiriye [buradan](https://aclanthology.org/2026.eacl-long.20/) ulaşabilirsiniz.`,
+      tr: `Makalemiz EACL 2026 Konferansı'na kabul edildi. Alperen Öztürk, E. Sümeyra Turali-Emre ve Michigan Üniversitesi’nden meslektaşlarımızla birlikte yazdığımız "{en|Automated Screening of Antibacterial Nanoparticle Literature: Dataset Curation and Model Evaluation}" başlıklı son çalışmamız [EACL 2026](https://2026.eacl.org/) **ana konferansına** kabul edildi! Bildiriye [buradan](https://aclanthology.org/2026.eacl-long.20/) ulaşabilirsiniz.`,
     },
   },
   {
