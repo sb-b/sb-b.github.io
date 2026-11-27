@@ -481,3 +481,42 @@ body:not([data-page="home"]) .entry:last-child { padding: 1.25rem 1.5rem; }
 @media (max-width: 59.99rem) {
   body:not([data-page="home"]) .page-head { padding-block: 2.5rem; }
 }
+
+/* ---------- Haber kartlarında metin kısaltma (...) ve tıklanabilirlik ---------- */
+
+.news-card {
+  cursor: pointer;
+}
+
+.news-card-clip {
+  max-height: 14rem; /* Daha az/çok yazı görünmesi için bu değeri (örn. 12rem veya 16rem) değiştirebilirsiniz */
+  overflow: hidden;
+}
+
+.news-card-body .entry h3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Başlık en fazla 4 satır, sonrası ... */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-card-body .entry p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Açıklama en fazla 4 satır, sonrası ... */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-card-more {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--link);
+  text-decoration: none;
+}
+
+.news-card-more:hover {
+  text-decoration: underline;
+}
