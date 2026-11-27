@@ -23,6 +23,7 @@ const NEWS = [
       en: `BUCOLIN Lab presented the latest research on historical Turkish NLP at [Dariah Day Istanbul 2026](https://www.dariah.eu/events/dariah-day-istanbul-2026). Held on November 26, 2026, at Istanbul’s historic Rami Library, the event brought together government institutions, universities, cultural heritage organizations, researchers, and students to introduce the [DARIAH](https://www.dariah.eu/) infrastructure, showcase Türkiye’s growing potential in digital humanities, and foster national and international networking and institutional collaboration.`,
       tr: `BUCOLIN Lab, [Dariah Day Istanbul 2026](https://www.dariah.eu/events/dariah-day-istanbul-2026) etkinliğinde tarihsel Türkçe doğal dil işleme (NLP) alanındaki güncel araştırmalarını sundu. 26 Kasım 2026 tarihinde İstanbul’un tarihi Rami Kütüphanesi’nde düzenlenen etkinlik; [DARIAH](https://www.dariah.eu/) altyapısını tanıtmak, Türkiye’nin dijital beşeri bilimler alanındaki büyüyen potansiyelini sergilemek ve ulusal ve uluslararası düzeyde ağ oluşturma ile kurumsal iş birliğini teşvik etmek amacıyla kamu kurumlarını, üniversiteleri, kültürel miras kuruluşlarını, araştırmacıları ve öğrencileri bir araya getirdi.`,  },
  },
+ },
  {
     id: 'csn-2026-paper',
     tag: 'paper',
@@ -30,7 +31,7 @@ const NEWS = [
       en: `Dilara Zeynep Gürer presented her paper titled "Standards-Aligned Synthetic Intent Generation Framework for Network Slicing toward Agentic Network Management" at the 2026 IEEE Conference on Standards for Communications and Networking (CSCN 2026), held in London, United Kingdom, on 7–9 September 2026. You can access the paper [here](https://ieeexplore.ieee.org/document/11772001). Congratulations, Dilara!`,
       tr: `Dilara Zeynep Gürer "Standards-Aligned Synthetic Intent Generation Framework for Network Slicing toward Agentic Network Management" başlıklı çalışmasını 7-9 Eylül 2026'da Londra'da gerçekleşen 2026 IEEE Conference on Standards for Communications and Networking (CSCN 2026)'te sundu. Makaleye [bu linkten](https://ieeexplore.ieee.org/document/11772001) ulaşabilirsiniz. Tebrikler, Dilara!`,
       },
-
+ },
 
   {
     id: 'lrec-2026-papers',
