@@ -19,7 +19,7 @@ const NEWS = [
  {
     id: 'dariah-day-2026',
     tag: 'people',
-    image: "img/news/presentation-dariah-day.jpg",
+    image: "img/news/presentation_dariah_day.jpeg",
     body: {
       en: `BUCOLIN Lab presented the latest research on historical Turkish NLP at [Dariah Day Istanbul 2026](https://www.dariah.eu/events/dariah-day-istanbul-2026). Held on November 26, 2026, at Istanbul’s historic Rami Library, the event brought together government institutions, universities, cultural heritage organizations, researchers, and students to introduce the [DARIAH](https://www.dariah.eu/) infrastructure, showcase Türkiye’s growing potential in digital humanities, and foster national and international networking and institutional collaboration.`,
       tr: `BUCOLIN Lab, [Dariah Day Istanbul 2026](https://www.dariah.eu/events/dariah-day-istanbul-2026) etkinliğinde tarihsel Türkçe doğal dil işleme (NLP) alanındaki güncel araştırmalarını sundu. 26 Kasım 2026 tarihinde İstanbul’un tarihi Rami Kütüphanesi’nde düzenlenen etkinlik; [DARIAH](https://www.dariah.eu/) altyapısını tanıtmak, Türkiye’nin dijital beşeri bilimler alanındaki büyüyen potansiyelini sergilemek ve ulusal ve uluslararası düzeyde ağ oluşturma ile kurumsal iş birliğini teşvik etmek amacıyla kamu kurumlarını, üniversiteleri, kültürel miras kuruluşlarını, araştırmacıları ve öğrencileri bir araya getirdi.`,  
