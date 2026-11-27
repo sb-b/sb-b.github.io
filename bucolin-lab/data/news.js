@@ -28,14 +28,16 @@ const NEWS = [
  {
     id: 'csn-2026-paper',
     tag: 'paper',
+    image: "img/news/cscn_2026_dilara.jpeg",
     body: {
-      en: `Dilara Zeynep Gürer presented her paper titled "Standards-Aligned Synthetic Intent Generation Framework for Network Slicing toward Agentic Network Management" at the 2026 IEEE Conference on Standards for Communications and Networking (CSCN 2026), held in London, United Kingdom, on 7–9 September 2026. You can access the paper [here](https://ieeexplore.ieee.org/document/11772001). Congratulations, Dilara!`,
+      en: `Dilara Zeynep Gürer presented her paper at IEEE CSCN 2026. The paper, titled "Standards-Aligned Synthetic Intent Generation Framework for Network Slicing toward Agentic Network Management", was presented at the 2026 IEEE Conference on Standards for Communications and Networking (CSCN 2026), held in London, United Kingdom, on 7–9 September 2026. You can access the paper [here](https://ieeexplore.ieee.org/document/11772001). Congratulations, Dilara!`,
       tr: `Dilara Zeynep Gürer "Standards-Aligned Synthetic Intent Generation Framework for Network Slicing toward Agentic Network Management" başlıklı çalışmasını 7-9 Eylül 2026'da Londra'da gerçekleşen 2026 IEEE Conference on Standards for Communications and Networking (CSCN 2026)'te sundu. Makaleye [bu linkten](https://ieeexplore.ieee.org/document/11772001) ulaşabilirsiniz. Tebrikler, Dilara!`,
     },
   },
   {
     id: 'lrec-2026-papers',
     tag: 'paper',
+   image: "img/news/lrec_2026.jpeg",
     body: {
       en: `Two papers from BUCOLIN Lab have been accepted to **[LREC 2026](https://lrec2026.info/)**. Congratulations to all the authors!`,
       tr: `BUCOLIN Lab’dan iki bildiri **[LREC 2026](https://lrec2026.info/)**’ya kabul edildi. Tüm yazarları tebrik ederiz!`,
