@@ -387,18 +387,23 @@ body:not([data-page="home"]) .entry:last-child { padding: 1.25rem 1.5rem; }
 
 .news-slide-media {
   position: relative;
-  height: 22rem;          /* locks all slides to the same clean height */
-  background: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18rem;          /* adjust to 15rem or 16rem if you want it even smaller */
+  padding: 0.75rem;
+  background: var(--bg);  /* soft frame around portrait/wide photos */
   overflow: hidden;
 }
 
 .news-slide-media img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 25%; /* keeps faces/upper half from getting cropped */
+  position: static;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
 }
 
 /* Fallback if a news item does not have an image yet */
