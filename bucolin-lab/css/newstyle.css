@@ -491,3 +491,7 @@ body:not([data-page="home"]) .entry:last-child { padding: 1.25rem 1.5rem; }
     padding: 1.5rem;
   }
 }
+.news-slide-body,
+.news-slide-body * {
+  font-family: var(--sans) !important;
+}
