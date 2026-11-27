@@ -13,15 +13,19 @@ function homePage() {
 
   const newsCard = (item) => {
     const imgSrc = item.image || item.img || item.photo;
+    const href = item.id ? `news.html#${esc(item.id)}` : 'news.html';
     const media = imgSrc
       ? `<img src="${esc(imgSrc)}" alt="" loading="lazy">`
       : `<div class="news-card-placeholder" aria-hidden="true"></div>`;
 
     return `
-      <div class="news-card">
-        <div class="news-card-media">${media}</div>
-        <div class="news-card-body">${newsItem(item)}</div>
-      </div>
+      <article class="news-card" data-href="${href}">
+        <a class="news-card-media" href="${href}" tabindex="-1">${media}</a>
+        <div class="news-card-body">
+          <div class="news-card-clip">${newsItem(item)}</div>
+          <a class="news-card-more" href="${href}">... &rarr;</a>
+        </div>
+      </article>
     `;
   };
 
@@ -63,5 +67,12 @@ function homePage() {
     )}
   `;
 }
+
+/* Kartın herhangi bir yerine tıklanınca (içindeki linkler hariç) ilgili habere git */
+document.addEventListener('click', (e) => {
+  if (e.target.closest('a')) return;
+  const card = e.target.closest('.news-card[data-href]');
+  if (card) window.location.href = card.dataset.href;
+});
 
 start(homePage);
